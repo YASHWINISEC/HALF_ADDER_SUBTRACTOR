@@ -34,6 +34,12 @@ Borrow = A’B
 Figure -02 HALF Subtractor
 
 **Truthtable**
+Fig - 01: HALF ADDER:
+![image](https://github.com/YASHWINISEC/HALF_ADDER_SUBTRACTOR/assets/139361633/92d6dedc-cd83-4341-89ad-20ebd1e083c1)
+
+fig - 02: HALF SUBTRACTOR:
+![image](https://github.com/YASHWINISEC/HALF_ADDER_SUBTRACTOR/assets/139361633/d1482678-8245-4717-acf8-94ca60b8c1ba)
+
 
 **Procedure**
 
@@ -52,10 +58,38 @@ Figure -02 HALF Subtractor
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
-Developed by: RegisterNumber:*/
+Developed by: YASHWINI M 
+
+RegisterNumber: 212223230249 */
+# HALF ADDER :
+```
+module half_adder(a,b,sum,carry);
+input a,b;
+output sum,carry; 
+assign sum = a^b;
+assign carry = a & b;
+endmodule
+```
+# HALF SUBTRACTOR :
+```
+module halfsub_top(a,b,D,Bo);
+input a,b;
+output D,Bo; // Outputs sum and carry for half adder:Outputs difference D,Borrow Bo for half subtractor
+assign D = a ^ b;
+  assign Bo = ~a & b;
+endmodule
+```
+
 
 **RTL Schematic**
 
 **Output/TIMING Waveform**
+# HALF ADDER :
+![image](https://github.com/YASHWINISEC/HALF_ADDER_SUBTRACTOR/assets/139361633/7e286a19-ae36-4fb7-bc83-903b03e17f38)
+
+# HALF SUBTRACTOR :
+![image](https://github.com/YASHWINISEC/HALF_ADDER_SUBTRACTOR/assets/139361633/1b9e70a7-8df0-4277-b25b-6b19fcc3fffc)
+
 
 **Result:**
+The code has been run successfully.
